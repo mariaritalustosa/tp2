@@ -21,5 +21,9 @@ public class Filme {
     @JoinColumn(name = "diretor_id", referencedColumnName = "id")
     private Diretor diretor;
 
+    @ManyToOne
+    @JoinColumn(name = "distribuidora_nome", referencedColumnName = "id")
+    private Distribuidora distribuidora;
+
 
 }
