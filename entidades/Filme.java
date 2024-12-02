@@ -1,6 +1,5 @@
 import jakarta.persistence.*;
 import lombok.*;
-
 @Entity
 @Getter
 @Setter
@@ -18,5 +17,9 @@ public class Filme {
     @Column(name = "anoLancamento")
     private int anoLancamento;
 
-    
+    @ManyToOne
+    @JoinColumn(name = "diretor_id", referencedColumnName = "id")
+    private Diretor diretor;
+
+
 }
