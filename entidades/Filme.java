@@ -15,5 +15,8 @@ public class Filme {
     @Column(name = "nome", nullable = false)
     private String nome;
 
+    @Column(name = "anoLancamento")
+    private int anoLancamento;
 
+    
 }
