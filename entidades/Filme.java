@@ -1,5 +1,7 @@
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.*;
+
 @Entity
 @Getter
 @Setter
@@ -24,6 +26,14 @@ public class Filme {
     @ManyToOne
     @JoinColumn(name = "distribuidora_nome", referencedColumnName = "id")
     private Distribuidora distribuidora;
+
+    @ManyToMany
+    @JoinTable(
+        name = "filme_genero",
+        joinColumns = @JoinColumn(name= "filme_id"),
+        inverseJoinColumns = @JoinColumn (name = "genero_id")
+    )
+    private List<Genero> generos;
 
 
 }
