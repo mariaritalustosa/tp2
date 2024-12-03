@@ -16,5 +16,11 @@ public class Genero {
     @Column(name = "nome", nullable = false)
     private String nome;
 
+    public Genero(String nome){
+        this.nome = nome;
+    }
+
+
+
 
 }
