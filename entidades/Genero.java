@@ -19,8 +19,4 @@ public class Genero {
     public Genero(String nome){
         this.nome = nome;
     }
-
-
-
-
 }
