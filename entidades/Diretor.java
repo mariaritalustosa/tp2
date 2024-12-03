@@ -9,6 +9,8 @@ import lombok.*;
 public class Diretor {
     @Id
     @GeneratedValue(strategy = GeneratedType.IDENTITY)
+    @Column(name ="id", nullable = false, unique = true)
     private Long id;
+    
     private String nome;
 }
