@@ -5,6 +5,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @Table(name= "filme")
 public class Filme {
     @Id
@@ -34,6 +35,11 @@ public class Filme {
         inverseJoinColumns = @JoinColumn (name = "genero_id")
     )
     private List<Genero> generos;
+
+    public Filme(String nome, int anoLancamento) {
+        this.nome = nome;
+        this.anoLancamento = anoLancamento;
+    }
 
 
 }
