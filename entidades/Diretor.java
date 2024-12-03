@@ -13,4 +13,10 @@ public class Diretor {
     private Long id;
     @Column(name = "nome", nullable = false)
     private String nome;
+
+
+    public Diretor(String nome) {
+        this.nome = nome;
+    }
+
 }
