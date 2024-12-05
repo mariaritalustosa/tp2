@@ -10,4 +10,8 @@ public class DiretorService {
         return diretorRepository.findAll();
     }
     
+    public Diretor salvar(Diretor diretor){
+        return diretorRepository.save(diretor);
+    }
+    
 }
