@@ -14,4 +14,9 @@ public class Distribuidora {
 
     @Column(name = "nome", nullable = false)
     private String nome;
+
+    public Distribuidora(String nome){
+        this.nome=nome;
+    }
+
 }
