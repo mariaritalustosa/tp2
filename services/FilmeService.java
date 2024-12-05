@@ -15,7 +15,11 @@ public class FilmeService {
         .orElseThrow(()-> new RuntimeException("Filme não encontrado" +id));
     }
 
-    
+    public Filme salvar(Filme filme){
+        return filmeRepository.save(filme);
+    }
+
+
 }
 
     
