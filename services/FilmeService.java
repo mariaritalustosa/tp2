@@ -6,9 +6,16 @@ public class FilmeService {
     @Autowired
     private FilmeRepository filmeRepository;
 
-    private List<Filme> listarTodos(Filme filme){
+    public List<Filme> listarTodos(Filme filme){
         return filmeRepository.findAll();
     }
+
+    public Filme buscarPorId(Long id){
+        return filmeRepository.findById
+        .orElseThrow(()-> new RuntimeException("Filme não encontrado" +id));
+    }
+
+    
 }
 
     
