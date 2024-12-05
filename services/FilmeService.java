@@ -19,6 +19,13 @@ public class FilmeService {
         return filmeRepository.save(filme);
     }
 
+    public void deletar(Long id){
+        if(!filmeRepository.existsById(id)){
+            throw new RuntimeException("Filme não encontrado" + id);
+        }
+        filmeRepository.deletedById(id);
+    }
+
 
 }
 
