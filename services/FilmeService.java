@@ -19,6 +19,14 @@ public class FilmeService {
         return filmeRepository.save(filme);
     }
 
+    public Filme atualizar(Long id, Filme filme){
+        if(filmeRepository.existsById(id)){
+            filme.setId(id);
+            return filmeRepository.save(filme);
+        }
+        throw new FilmeNaoEncontradoException("O filme não foi encontrado");
+    } 
+
     public void deletar(Long id){
         if(!filmeRepository.existsById(id)){
             throw new RuntimeException("Filme não encontrado" + id);
