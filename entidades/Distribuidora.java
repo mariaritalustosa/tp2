@@ -11,4 +11,7 @@ public class Distribuidora {
     @GeneratedValue(strategy = GeneratedType.IDENTITY)
     @Column(name = "id", nullable = false, unique = true)
     private Long id;
+
+    @Column(name = "nome", nullable = false)
+    private String nome;
 }
