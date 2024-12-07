@@ -28,6 +28,12 @@ public class GeneroService {
             return generoRepository.save(genero);
         }
         throw new GeneroNaoEncontradoException("O gênero não foi encontrado");
-        
+    }
+
+    public void deletar(Long id){
+        if(!generoRepository.existsById(id)){
+            throw new RuntimeException("O gênero não foi encontrado");
+        }
+           generoRepository.deletedById(id);
     }
 }
