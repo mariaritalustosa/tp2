@@ -17,4 +17,8 @@ public class GeneroService {
         return generoRepository.findById
         .orElseThrow(()-> new RuntimeException("Gênero não encontrado" +id));
     }
+
+    public Genero salvar(Genero genero){
+        return generoRepository.save(genero);
+    }
 }
