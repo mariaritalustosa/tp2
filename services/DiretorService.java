@@ -22,4 +22,11 @@ public class DiretorService {
         throw new DiretorNaoEncontradoException("O diretor não foi encontrado");
     }
 
+    public void deletar(Long id){
+        if(!diretorRepository.existsById(id)){
+            throw new RuntimeException("Diretor não encontrado"+id);
+        }
+        diretorRepository.deletedById(id);
+    }
+
 }

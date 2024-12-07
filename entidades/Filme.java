@@ -6,6 +6,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@Builder
 @Table(name= "filme")
 public class Filme {
     @Id

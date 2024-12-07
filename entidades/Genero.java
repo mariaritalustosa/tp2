@@ -4,6 +4,7 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @Table(name = "genero")
 public class Genero {
