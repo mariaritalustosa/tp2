@@ -21,4 +21,13 @@ public class GeneroService {
     public Genero salvar(Genero genero){
         return generoRepository.save(genero);
     }
+
+    public Genero atualizar(Long id){
+        if(!generoRepository.existsById(id)){
+            genero.setId(id);
+            return generoRepository.save(genero);
+        }
+        throw new GeneroNaoEncontradoException("O gênero não foi encontrado");
+        
+    }
 }
