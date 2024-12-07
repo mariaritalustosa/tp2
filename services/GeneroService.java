@@ -12,4 +12,9 @@ public class GeneroService {
     public List <Genero> listarTodos(Genero genero){
         return generoRepository.findAll();
     }
+
+    public Genero buscarPorId(Long id){
+        return generoRepository.findById
+        .orElseThrow(()-> new RuntimeException("Gênero não encontrado" +id));
+    }
 }
