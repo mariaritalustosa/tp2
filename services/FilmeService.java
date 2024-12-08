@@ -6,7 +6,7 @@ public class FilmeService {
     @Autowired
     private FilmeRepository filmeRepository;
 
-    public List<Filme> listarTodos(Filme filme){
+    public List<Filme> listarTodos(){
         return filmeRepository.findAll();
     }
 

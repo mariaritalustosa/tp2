@@ -9,7 +9,7 @@ public class GeneroService {
     @Autowired
     private GeneroRepository generoRepository;
 
-    public List <Genero> listarTodos(Genero genero){
+    public List <Genero> listarTodos(){
         return generoRepository.findAll();
     }
 

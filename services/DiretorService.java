@@ -6,7 +6,7 @@ public class DiretorService {
     @Autowired
     private DiretorRepository diretorRepository;
     
-    public List<Diretor> listarTodos(Long id){
+    public List<Diretor> listarTodos(){
         return diretorRepository.findAll();
     }
     

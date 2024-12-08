@@ -5,4 +5,8 @@ import org.springframework.stereotype.Service;
 public class DistribuidoraService {
     @Autowired
     private DistribuidoraRepository distribuidoraRepository;
+
+    public List<Distribuidora> listarTodos(){
+        return distribuidoraRepository.findAll();
+    }
 }
