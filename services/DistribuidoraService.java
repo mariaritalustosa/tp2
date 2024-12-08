@@ -14,4 +14,11 @@ public class DistribuidoraService {
         return distribuidoraRepository.save(distribuidora);
     }
 
+    public Distribuidora atualizar(Long id, Distribuidora distribuidora){
+        if(!distribuidoraRepository.existsById(id)){
+            distribuidora.setId();
+            return distribuidoraRepository.save(distribuidora);
+        }
+        throw new DistribuidoraNaoEncontradaException("A distribuidora não foi encontrada");
+    }
 }
