@@ -21,4 +21,11 @@ public class DistribuidoraService {
         }
         throw new DistribuidoraNaoEncontradaException("A distribuidora não foi encontrada");
     }
+
+    public void deletar(Long id){
+        if(!distribuidoraRepository.existsById(id)){
+            throw new RuntimeException("A distribuidora não foi encontrada"+id);
+        }
+        distribuidoraRepository.deletedById();
+    }
 }
