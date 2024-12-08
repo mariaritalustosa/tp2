@@ -9,4 +9,9 @@ public class DistribuidoraService {
     public List<Distribuidora> listarTodos(){
         return distribuidoraRepository.findAll();
     }
+
+    public Distribuidora salvar(Distribuidora distribuidora){
+        return distribuidoraRepository.save(distribuidora);
+    }
+
 }
