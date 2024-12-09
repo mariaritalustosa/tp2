@@ -14,6 +14,11 @@ public class DistribuidoraService {
         return distribuidoraRepository.save(distribuidora);
     }
 
+    public Distribuidora buscarPorId(Long id){
+        return distribuidoraRepository.findById
+        .orElseThrow (()-> RuntimeException("Distribuidora não encontrada"+id));
+    }
+
     public Distribuidora atualizar(Long id, Distribuidora distribuidora){
         if(!distribuidoraRepository.existsById(id)){
             distribuidora.setId();
