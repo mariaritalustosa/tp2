@@ -14,6 +14,11 @@ public class DiretorService {
         return diretorRepository.save(diretor);
     }
 
+    public Diretor buscarPorId(Long id){
+        return diretorRepository.findById
+        .orElseThrow (()-> new RuntimeException("Diretor não encontrado" +id)); 
+     }
+
     public Diretor atualizar(Long id, Diretor diretor){
         if(!diretorRepository.existsById(id)){
             diretor.setId(id);
