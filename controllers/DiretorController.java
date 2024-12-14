@@ -11,5 +11,12 @@ public class DiretorController {
         return diretorRepository.findAll();
     }
 
+    @PostMapping("")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Diretor salvarDiretor(@RequestBody Diretor diretorSalvar) {
+        return diretorRepository.save(diretorSalvar);
+    }
+    
+
     
 }
