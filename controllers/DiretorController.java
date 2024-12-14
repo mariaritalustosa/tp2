@@ -3,6 +3,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("api_filmes/diretor")
-public class DiretorRepository {
-    
+public class DiretorController {
+    private final DiretorRepository diretorRepository;
 }
