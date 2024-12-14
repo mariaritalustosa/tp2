@@ -16,6 +16,7 @@ public class Filme {
     private Long id;
 
     @Column(name = "nome", nullable = false)
+    @Size(min = 3, max = 100, message = "O título deve ter entre 3 e 100 caracteres")
     private String nome;
 
     @Column(name = "anoLancamento")

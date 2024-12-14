@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("api_filmes/distribuidora")
 public class DistribuidoraController {
@@ -20,7 +22,7 @@ public class DistribuidoraController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public Distribuidora salvarDistribuidora(@RequestBody Distribuidora distribuidoraSalvar) {
+    public Distribuidora salvarDistribuidora(@RequestBody @Valid Distribuidora distribuidoraSalvar) {
         return distribuidoraRepository.save(distribuidoraSalvar);
     }
     

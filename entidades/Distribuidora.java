@@ -1,4 +1,6 @@
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Entity
@@ -13,6 +15,8 @@ public class Distribuidora {
     @Column(name = "id", nullable = false, unique = true)
     private Long id;
 
+    @NotBlank(message = "o nome da distribuidora é obrigatório")
+    @Size(max = 100, message = "o nome da distribuidora não pode ter mais que 100 caracteres")
     @Column(name = "nome", nullable = false)
     private String nome;
 
