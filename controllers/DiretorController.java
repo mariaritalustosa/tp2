@@ -5,4 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api_filmes/diretor")
 public class DiretorController {
     private final DiretorRepository diretorRepository;
+
+    @GetMapping("")
+    public List<Diretor> recuperarDiretor() {
+        return diretorRepository.findAll();
+    }
+
+    
 }

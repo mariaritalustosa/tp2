@@ -14,11 +14,6 @@ public class FilmeController {
 
     private final FilmeRepository filmeRepository;
 
-    @Autowired
-    public FilmeController(FilmeRepository repository){
-        this.filmeRepository=filmeRepository;
-    }
-
     @GetMapping("")
     public List<Filme> recuperarFilmes() {
         return filmeRepository.findAll();
