@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("api_filmes/generos")
 public class GeneroController {
@@ -18,7 +20,7 @@ public class GeneroController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public Genero salvarGenero(@RequestBody Genero generoSalvar) {
+    public Genero salvarGenero(@Valid @RequestBody Genero generoSalvar) {
         return generoRepository.save(generoSalvar);
     }
 

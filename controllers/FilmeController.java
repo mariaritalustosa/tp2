@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("api_filmes/filmes")
 public class FilmeController {
@@ -20,7 +22,7 @@ public class FilmeController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public Filme salvarFilme(@RequestBody Filme filmeSalvar) {
+    public Filme salvarFilme(@Valid @RequestBody Filme filmeSalvar) {
         return filmeRepository.save(filmeSalvar);
     }
     

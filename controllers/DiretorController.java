@@ -20,7 +20,7 @@ public class DiretorController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public Diretor salvarDiretor(@RequestBody Diretor diretorSalvar) {
+    public Diretor salvarDiretor(@RequestBody @Valid Diretor diretorSalvar) {
         return diretorRepository.save(diretorSalvar);
     }
 
